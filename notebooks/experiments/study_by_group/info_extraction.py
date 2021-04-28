@@ -109,7 +109,7 @@ def df_family(product_family,list_directories):
     ##here after the iterations are done we store the arrays generated:
     yTrain = pd.DataFrame({'target':pmf})
     
-    xTrain = pd.DataFrame({'seasonability_circ_cos':seasonability_1,'seasonability_circ_sin':seasonability_2, 'time':trend, 'y_t-1':yTrain.target.shift(1),})
+    xTrain = pd.DataFrame({'seasonability_circ_cos':seasonability_1,'seasonability_circ_sin':seasonability_2, 'time':trend, 'y_t-1':yTrain.target.shift(1)})
     return yTrain, xTrain
 
 def predict_with_last_year(target, time_units_year):
